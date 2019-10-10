@@ -20,6 +20,7 @@
         <module>microservice-common</module>
         <module>microservice-cart</module>
         <module>microservice-consumer</module>
+        <module>microservice-sellercenter</module>
     </modules>
 
     <!--<name>microservice</name>-->
