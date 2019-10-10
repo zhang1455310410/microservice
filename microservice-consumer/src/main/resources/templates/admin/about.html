@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>关于我们</title>
+
+ <link rel="stylesheet"  href="bootstrap/css/bootstrap.css"/>
+		<script  src="/js/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+			<link rel="stylesheet" href="/css/admin/main.css" />
+</head>
+<body>
+ <div id="wrapper">
+ 	<div th:replace="admin/sidebar::#sidebar-nav(activeUri='about')"></div>
+ 	<div class="main">
+ 		<div class="main-content">
+				<div class="container-fluid">
+				<h2>队伍介绍</h2>
+				<div class="row">
+				<div class="col-md-12">
+				<div class="panel">
+				<div class="panel-body">
+					<div><label>前端技术使用：</label><span>css html jquery bootstrap  thymeleaf ajax </span></div>
+					<div><label>后端技术使用：</label><span>spring4 springmvc mybatis springboot springcloud eureka zuul maven  restful </span></div>
+					<div><label>队伍介绍：</label><span>我们来自五湖四海、但共同的目标孕育着同一个理想，出发点不同但目的地一样，年轻的心在这一刻相聚、团结一致、不理不弃，斩破风浪，勇敢起航。</span></div>
+ 			</div>
+ 			</div>
+ 			</div>
+ 			</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	</div>
+</body>
+</html>

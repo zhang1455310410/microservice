@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+		<link rel="stylesheet"  href="bootstrap/css/bootstrap.css"/>
+		<script  src="/js/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/css/admin/main.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div th:replace="admin/sidebar::#sidebar-nav(activeUri='products')"></div>
+		
+		<div class="main">
+			<div class="main-content">
+				<div class="container-fluid">
+					<h2>商品详情</h2>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- BASIC TABLE -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">运动鞋</h3>
+								</div>
+								<div class="panel-body">
+									<table class="table" >
+										<thead >
+											<tr>
+												<th class="col-md-1">编号</th>
+												<th class="col-md-1">商品名称</th>
+												<th class="col-md-5">商品描述</th>
+												<th class="col-md-1">价格</th>
+												<th class="col-md-1">图片</th>
+												<th class="col-md-3">操作</th>
+											</tr>
+										</thead>
+										<tbody class="product-model">
+											
+											
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						
+					<div class="modal fade" tabindex="-1" role="dialog" id="showlog">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title">商品修改</h4>
+										</div>
+										<form action="/shoes" enctype="multipart/form-data"  method="post" >
+										<div class="modal-body">
+											<!--跳转-->
+											
+											<input type="hidden" name="_method" value="put">
+											  <div class="form-group">
+								    <label for="exampleInputText1" >编号</label>
+								    <input type="text" name="id" class="form-control" id="exampleInputText1" readonly>
+								  </div>
+								  <div class="form-group">
+								    <label for="exampleInputText2">商品名称</label>
+								    <input type="text" name="name" class="form-control" id="exampleInputText2" >
+								  </div>
+								    <div class="form-group">
+								    <label for="exampleInputText3">商品描述</label>
+								    <input type="text" name="description" class="form-control" id="exampleInputText3" >
+								  </div>
+								    <div class="form-group">
+								    <label for="exampleInputText4">价格</label>
+								    <input type="text" name="price" class="form-control" id="exampleInputText4" >
+								  </div>
+								   
+								  <div class="form-group">
+								    <label for="exampleInputFile">图片</label>
+								    <input type="file" name="image" id="exampleInputFile" >
+								  
+								  </div>
+									</div>
+										<div class="modal-footer">
+											  <button type="submit" class="btn btn-primary">修改</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											
+										</div>
+										</form>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div>
+							
+							
+						</div>
+					</div>
+					<nav style="text-align: center;">
+			<ul class="pagination" >
+			     </ul>
+			</nav>
+				</div>
+				
+			</div>
+			
+			
+			</div>
+			
+			</div>
+				<script type="text/javascript" src="/js/admin/products.js"></script>
+			<script>
+				
+					function show(){
+		$("#showlog").modal("show");
+		
+		}
+			</script>
+	</body>
+</html>

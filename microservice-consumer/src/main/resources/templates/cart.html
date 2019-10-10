@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet"  href="/bootstrap/css/bootstrap.css" />
+		<script src="/js/jquery-3.1.1.js" ></script>
+		<script src="/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+		<link rel="stylesheet" href="/css/cart.css" />
+	</head>
+
+	<body>
+		<div th:replace="header"></div>
+		
+		
+		<div class="container">
+			
+			<div class="col-md-12 col-sm-12 col-xs-12 goods-title">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<input type="checkbox" name="allCheck" onclick="checkAll(this)" /> 全选
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-5">商品信息</div>
+				<div class="col-md-1 col-sm-1 col-xs-1">鞋码</div>
+				<div class="col-md-1 col-sm-1 col-xs-1">数量</div>
+				<div class="col-md-1 col-sm-1 col-xs-1">单价</div>
+				<div class="col-md-1 col-sm-1 col-xs-1">操作</div>
+			</div>
+
+			<div class="goods-content  col-md-12 col-sm-12 col-xs-12 "  th:each="i:${list}" th:if="${ list!=null}">
+				<div class="col-md-1 col-sm-1 col-xs-1 ">
+					<input type="checkbox" name="check" />
+				</div>
+				<input type="hidden" class="id" th:value="${i.id}"/>
+				
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<img src="img/single/black.jpg" th:src="@{${i.img}}"  class="goods-info-img" />
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-5 goods-info">
+				
+					<p ><label>名称：</label><span th:text="${i.name}">asdsad</span></p>
+					<p ><label style="float: left;">详情：</label><span class="col-md-5 col-sm-5 col-xs-5"  style="overflow:hidden;text-overflow:ellipsis;white-space: nowrap;padding: 0;" th:text="${i.description}"></span></p>
+					<!-- <p><label>颜色：</label>黑</p> -->
+					
+					<p ><label>种类：</label>运动鞋</p>
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1">
+					<p th:text="${i.shoesSize}">41</p>
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1 goods-number" th:text="${i.num}"></div>
+				<div class="col-md-1 col-sm-1 col-xs-1 goods-price">
+					<p th:text="${i.price}">80</p>
+				</div>
+				<div class="col-md-1 col-sm-1 col-xs-1"><button class="btn btn-danger">删除</button></div>
+				<div style="display: none;" class="state">0</div>
+			</div>
+
+			</div>
+			<div class="container">
+				<nav aria-label="Page navigation" style="text-align: center;">
+  <ul class="pagination">
+     <li th:class="1==${pageNum}?' disabled ': ''"><a th:src="@{/orders/1}">首页</a></li>
+    <li th:class="${isFirstPage}?' disabled':''"><a  th:src="@{/orders/${prePage}}" aria-label="Previous">上一页</a></li>
+    
+    <li th:each="pageNums:${navigatepageNums}" th:class="${pageNums==pageNum?'active':''}"><a th:src="@{/orders/${pageNum}}"  th:text="${pageNums}"></a></li>
+    <li th:class="${isLastPage}?' disabled':''"><a th:src="@{/orders/${nextPage}}"  aria-label="Next">下一页</a></li>
+    <li th:class="${isLastPage}?' disabled':''"><a th:src="@{/orders/${lastPage}}" >尾页</a></li>
+  </ul>
+</nav>
+				</div>
+	<div class="col-md-12 col-sm-12 col-xs-12" style="height: 131px">
+			<div class="cart-total">
+
+				<h4 class="last-price">总计</h4>
+				<span class="total final" name="total"></span>
+				<div class="clearfix"></div>
+				<a class="order" href="#">结算</a>
+
+			</div>
+
+		</div>
+</div>
+	</body>
+	
+	<script src="/js/cart.js"></script>
+	
+		<div><footer th:replace="footer"></footer></div>
+</html>

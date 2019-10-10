@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-cart" />
+        <module name="microservice-common" />
+        <module name="microservice-consumer" />
+        <module name="microservice-eureka-server" />
+        <module name="microservice-portal" />
+        <module name="microservice-sellercenter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice" target="1.8" />
+      <module name="microservice-cart" target="1.8" />
+      <module name="microservice-common" target="1.8" />
+      <module name="microservice-consumer" target="1.8" />
+      <module name="microservice-eureka-server" target="1.8" />
+      <module name="microservice-portal" target="1.8" />
+      <module name="microservice-portal-api" target="1.8" />
+      <module name="microservice-sellercenter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

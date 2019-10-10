@@ -1,0 +1,74 @@
+	* {
+		box-sizing: border-box;
+	margin: 0px;
+	
+	}
+
+	
+			footer {
+			
+				margin: 0px;
+				position: fixed;
+				bottom: 0px;
+				
+				margin-right: 0px;
+			}
+			
+			footer a {
+				font-size: 15px;
+			}
+			
+			footer dl {
+				float: left;
+				margin: 20px 0 65px 0px;
+				letter-spacing: 1px;
+				color: #555555;
+				width:20%;
+			}
+			
+			
+			
+			footer dd a {
+				transition: color 1s;
+				color: #666666;
+				 font-family: 'Aladin', cursive;
+			}
+			
+			footer dd {
+				margin-top: 5px;
+			}
+			
+			footer dd a:hover {
+				list-style: square inside;
+				color: #ACACAC;
+				cursor: pointer;
+			}
+			
+			a:hover {
+				text-decoration: none;
+			}
+			
+			footer dl:last-child dd{
+				float: left;
+				margin-right:10px ;
+			
+					}
+					.weibo:hover{
+						animation:flip 2s infinite;
+					}
+					.weixin:hover{
+						animation:ring 2s infinite;
+					}
+			@keyframes flip{
+    0%{transform: rotateY(0);animation-timing-function:ease-out;}
+    50%{ transform: rotateY(360deg) ; animation-timing-function:ease-in;}
+    100%{ animation-timing-function:ease-in;}
+}
+
+@keyframes ring{
+    0%{transform:scale(1);}
+    10%,20%{transform:scale(0.9) rotate(-3deg);}
+    30%,50%,70%,90%{transform:scale(1.1) rotate(3deg);}
+    40%,60%,80%{transform:scale(1.1) rotate(-3deg);}
+    100%{transform:scale(1) rotate(0);}
+}

@@ -1,0 +1,91 @@
+			.container{
+				 min-width:997px;
+			}
+			.container  .goods-title div{
+				font-size:18px;
+				font-family: "楷体";
+			}
+			
+			.container .col-md-12{
+				
+				border-bottom: 1px dashed #E0E0E0;
+				padding: 15px 0px;
+				font-size: 14px;
+				
+			}
+			.breadcrumb {
+			  background: transparent;
+			}
+			
+			.breadcrumb li {
+			  color: #000;
+			  font-weight: 200;
+			}
+			
+			 .breadcrumb li a {
+			  color: #000;
+			  font-weight: 200;
+			}
+			.goods-content{
+				height: 120px;
+			}
+			.goods-content .col-sm-1{
+				margin-top:2% ;
+			}
+			.goods-info>p{
+				margin: 0;
+				display: inline-block;
+			}
+			.goods-info>p>label{
+			margin:0;
+			}
+			.goods-info-img{
+				width: 80px;
+				height:80px ;
+			}
+			.goods-price p{
+				color: #e84d1c;font-weight: bold;
+			}
+			.cart-total {
+			  padding-top: 26px;
+			 width:30%;
+			 float:right;
+			}
+			
+			.cart-total{
+				margin-top: 20px;
+					border-top: 1px solid #333;
+			}
+			h4.last-price{
+				color:#000;
+				font-size:1.3em;
+				font-weight:600;
+				width:50%;
+				float:left;
+				margin: 0;
+			
+			}
+			
+			a.order {
+			  background:#333;
+			  padding: 10px 1.5em;
+			  border-radius: 7px;
+			  -moz-border-radius: 7px;
+			-webkit-border-radius: 7px;
+			-o-border-radius: 7px;
+			  font-size: 1em;
+			  color: #fff;
+			  text-decoration: none;
+			  display: block;
+			  font-weight: 600;
+			  text-align: center;
+			  width: 85%;
+			  margin: 3em auto 0 auto;
+			}
+			a.order:hover{
+				background:#026466;
+			}
+			.pagination > li > a{
+	color: black;
+	
+}

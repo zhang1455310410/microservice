@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css"  th:src="@{/webjars/jquery/3.3.1/jquery.js}"/>
+		<script src="js/jquery-3.1.1.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
+		<link rel="stylesheet" href="css/login.css" />
+
+	</head>
+	<!--
+		login -----register
+		
+	-->
+
+	<body>
+		
+		<div class="lowin">
+			
+			<div class="lowin-wrapper">
+				<div class="lowin-box lowin-login">
+					<div class="lowin-box-inner">
+						<form action="index.html" th:action="@{/loging}" method="post"  >
+							<p>请登录</p>
+							<hr />
+							<div class="lowin-group">
+								<span class="glyphicon glyphicon-user lowin-input-left"></span>
+								<input type="text" name="username" class="lowin-input" placeholder="请输入账号" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+							</div>
+							<div class="lowin-group password-group">
+								<span class="glyphicon glyphicon-lock lowin-input-left"></span>
+								<input type="password" name="password" class="lowin-input" placeholder="请输入密码" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+							</div>
+							<!-- th:if="${not #strings.isEmpty(msg)}" -->
+							<div class="text-msg" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}" ></div>
+
+							<button class="lowin-btn" >
+							登陆
+						</button>
+
+							<div class="text-foot">
+								没有账户
+								<a href="" class="register-link">请注册</a>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="lowin-box lowin-register">
+					<div class="lowin-box-inner">
+					<form 	 >  
+							<p>请注册</p>
+							<hr />
+							<div class="lowin-group">
+								<label>账号</label>
+								<input type="text" name="regusername" class="lowin-input" placeholder="请输入注册账号" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+							</div>
+
+							<div class="lowin-group">
+								<label>密码</label>
+								<input type="password" name="regpassword" class="lowin-input" placeholder="请输入注册密码" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+							</div>
+							<div class="code">
+								<label>验证码</label>
+								<input type="text" value="" placeholder="请输入验证码（不分大小）" class="input-val lowin-input" />
+								<canvas id="canvas" width="100" height="43"></canvas>
+
+							</div>
+							<div class="text-msg"></div>
+							<button class="lowin-btn register-btn">
+							注册
+						</button>
+
+							<div class="text-foot">
+								已经注册?
+								<a href="" class="login-link">请登陆</a>
+							</div>
+						</form> 
+					</div>
+				</div>
+			
+			</div>
+			<script src="js/login.js"></script>
+			<script>
+				Auth.init();
+				
+				
+			</script>
+	</body>
+
+</html>

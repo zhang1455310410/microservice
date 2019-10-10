@@ -1,0 +1,63 @@
+			* {
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				box-sizing: border-box;
+			}
+			
+			.clearfix {
+				content: "";
+				display: block;
+				clear: both;
+			}
+		
+			
+			.container {
+				margin-top: 100px;
+			}
+			
+			.form-horizontal {
+				margin-left: 410px;
+			}
+			
+			.form-control {
+				height: 50px;
+				font-size: 14px;
+			}
+			
+			.btn-success {
+				background: black;
+				border-color:black;
+			}
+			
+			.btn-success:hover {
+				opacity: 0.8;
+				background: black;
+			}
+			
+			.btn-success:focus,
+			.btn-success.focus {
+				opacity: 0.8;
+				background: black;
+			}
+			
+			.btn:first {
+				margin-top: 30px;
+				border: none;
+			}
+			
+			.form-control {
+				border-radius: 0px;
+			}
+			
+			.btn {
+				height: 46px;
+				width: 315px;
+				margin-top: 15px;
+				border-radius: 0px;
+			}
+			
+			.col-sm-offset-2 {
+				margin-left: 36px;
+			}
+			
