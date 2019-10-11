@@ -105,6 +105,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <!--<scope>test</scope>-->
         </dependency>
+        <!--引入zipkin-clien端依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <!-- actuator监控信息完善 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
     </dependencies>
 

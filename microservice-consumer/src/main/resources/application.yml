@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: server-consumer
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+      sampler:
+        probability: 1.0
   thymeleaf:
     cache: false  #关闭缓存
     prefix: classpath:/templates/
@@ -17,3 +22,9 @@ eureka:
 
   instance:
     prefer-ip-address: true     #访问路径可以显示IP地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
