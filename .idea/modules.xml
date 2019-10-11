@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/microservice-eureka-server/microservice-eureka-server.iml" filepath="$PROJECT_DIR$/microservice-eureka-server/microservice-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-portal/microservice-portal.iml" filepath="$PROJECT_DIR$/microservice-portal/microservice-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-sellercenter/microservice-sellercenter.iml" filepath="$PROJECT_DIR$/microservice-sellercenter/microservice-sellercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-zipkin/microservice-zipkin.iml" filepath="$PROJECT_DIR$/microservice-zipkin/microservice-zipkin.iml" />
     </modules>
   </component>
 </project>

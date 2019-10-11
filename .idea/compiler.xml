@@ -12,6 +12,7 @@
         <module name="microservice-eureka-server" />
         <module name="microservice-portal" />
         <module name="microservice-sellercenter" />
+        <module name="microservice-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="microservice-portal" target="1.8" />
       <module name="microservice-portal-api" target="1.8" />
       <module name="microservice-sellercenter" target="1.8" />
+      <module name="microservice-zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

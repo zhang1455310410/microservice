@@ -2,6 +2,7 @@ package com.ccit.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.ccit.pojo.Shoes;
 import com.ccit.util.FastDFSClientUtil;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ClassUtils;
@@ -129,9 +131,25 @@ public class ShoesController {
 	 */
 	@ResponseBody
 	@GetMapping("/shoes/rand")
+	@HystrixCommand(fallbackMethod = "hiError")
 	public List<Shoes> getShoesRand() {
 		return restTemplate.getForObject(REST_URL_PREFIX+"/shoes/rand", List.class);
 	}
-	
+
+
+	public  List<Shoes> hiError(){
+
+		List<Shoes>  list=new ArrayList<>();
+		Shoes shoes=new Shoes();
+		 shoes.setId(1);
+		 shoes.setName("卧槽无情好残忍");
+		 shoes.setDescription("");
+		 shoes.setPrice(0.0);
+		 shoes.setImg("");
+		 for(int  i=0;i<=9;i++){
+		 	list.add(shoes);
+		}
+		return list;
+	}
 	
 }

@@ -21,6 +21,7 @@
         <module>microservice-cart</module>
         <module>microservice-consumer</module>
         <module>microservice-sellercenter</module>
+        <module>microservice-zipkin</module>
     </modules>
 
     <!--<name>microservice</name>-->
