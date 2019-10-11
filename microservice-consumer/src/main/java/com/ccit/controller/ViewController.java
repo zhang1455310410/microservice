@@ -86,4 +86,9 @@ public class ViewController {
 	}
 	@RequestMapping("/test")
 	public String 	test(){ return  "test"; }
+
+	public String test2(){
+
+            return  "";
+	}
 }
