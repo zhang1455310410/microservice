@@ -71,10 +71,8 @@ public class ShoesController {
 	 * @param id
 	 * @return
 	 */
-
 	@DeleteMapping("/shoes/{id}")
 	public boolean deleteShoes(@PathVariable("id")Integer id) {
-	
 		return shoesServiceImp.deleteShoes(id);
 	}
 	/**
@@ -82,7 +80,6 @@ public class ShoesController {
 	 * @param id
 	 * @return
 	 */
-	
 	@GetMapping("/shoes/{id}")
 	public Shoes getShoes(@PathVariable("id")Integer id) {
 		return shoesServiceImp.getOneShoes(id);
@@ -91,7 +88,6 @@ public class ShoesController {
 	 * 随机十条数据
 	 * @return
 	 */
-	
 	@GetMapping("/shoes/rand")
 	public List<Shoes> getShoesRand() {
 		return shoesServiceImp.selectRand();

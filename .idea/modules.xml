@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/microservice.iml" filepath="$PROJECT_DIR$/microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-admin/microservice-admin.iml" filepath="$PROJECT_DIR$/microservice-admin/microservice-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-cart/microservice-cart.iml" filepath="$PROJECT_DIR$/microservice-cart/microservice-cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-common/microservice-common.iml" filepath="$PROJECT_DIR$/microservice-common/microservice-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-consumer/microservice-consumer.iml" filepath="$PROJECT_DIR$/microservice-consumer/microservice-consumer.iml" />
@@ -10,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/microservice-portal/microservice-portal.iml" filepath="$PROJECT_DIR$/microservice-portal/microservice-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-sellercenter/microservice-sellercenter.iml" filepath="$PROJECT_DIR$/microservice-sellercenter/microservice-sellercenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-zipkin/microservice-zipkin.iml" filepath="$PROJECT_DIR$/microservice-zipkin/microservice-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-zuul/microservice-zuul.iml" filepath="$PROJECT_DIR$/microservice-zuul/microservice-zuul.iml" />
     </modules>
   </component>
 </project>

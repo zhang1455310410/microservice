@@ -22,6 +22,7 @@
         <module>microservice-consumer</module>
         <module>microservice-sellercenter</module>
         <module>microservice-zipkin</module>
+        <module>microservice-zuul</module>
     </modules>
 
     <!--<name>microservice</name>-->

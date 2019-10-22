@@ -20,17 +20,14 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class LoginController {
 private static final String REST_URL_PREFIX = "http://server-portal";
-	
 	@Autowired
 	private RestTemplate restTemplate;
-	
 	@PostMapping("/loging")
 	public String login(HttpServletRequest request, User user) {
 		if (user.getUsername() != null && user.getPassword() != null&&user.getUsername().equals("")==false&&user.getPassword().equals("")==false) {
 			User usero = restTemplate.getForObject(
 					REST_URL_PREFIX+ "/loging?username=" + user.getUsername() + "&password=" + user.getPassword(),
 					User.class);
-
 			HttpSession session = request.getSession();
 			  if (usero != null) {
 				 if (usero.getId() != null) {
@@ -38,16 +35,11 @@ private static final String REST_URL_PREFIX = "http://server-portal";
 					return "redirect:/index";
 				}
 			} else {
-				
 				request.setAttribute("msg", "账号或密码不正确	");
-			
 				return "login";
 			 }
-		} 
-		 
+		}
 			request.setAttribute("msg", "账号密码不能为空	");
-		
-
 		return "login";
 
 	}

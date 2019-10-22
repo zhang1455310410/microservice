@@ -1,0 +1,22 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: server-admin
+
+eureka:
+  client:
+    service-url:
+      # Eureka注册中心连接地址
+      # 如果注册中心地址配置的域名，这里使用 http://域名/eureka/ 格式
+      defaultZone: http://localhost:7001/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

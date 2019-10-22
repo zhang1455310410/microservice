@@ -4,16 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
 
 import com.ccit.pojo.Shoes;
 import com.ccit.util.FastDFSClientUtil;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +29,7 @@ import com.github.pagehelper.PageInfo;
 @Controller
 public class ShoesController {
 	
-	private static final String REST_URL_PREFIX = "http://server-sellercenter";
+	private static final String REST_URL_PREFIX = "http://server-zuul/sellercenter";
 	
 	@Autowired
 	private RestTemplate restTemplate;
@@ -142,7 +138,7 @@ public class ShoesController {
 		List<Shoes>  list=new ArrayList<>();
 		Shoes shoes=new Shoes();
 		 shoes.setId(1);
-		 shoes.setName("卧槽无情好残忍");
+		 shoes.setName("服务器出现了一些问题");
 		 shoes.setDescription("");
 		 shoes.setPrice(0.0);
 		 shoes.setImg("");

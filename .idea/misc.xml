@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/microservice-sellercenter/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-admin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

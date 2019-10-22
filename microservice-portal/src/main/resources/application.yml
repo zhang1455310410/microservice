@@ -7,6 +7,10 @@ mybatis:
   - classpath:mybatis/mapper/*.xml                       # mapper映射文件
 
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9004
   application:
     name: server-portal
   zipkin:
@@ -32,6 +36,5 @@ eureka:
 
   instance:
     prefer-ip-address: true     #访问路径可以显示IP地址
-
 
 

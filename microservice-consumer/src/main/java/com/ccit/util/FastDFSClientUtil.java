@@ -43,7 +43,6 @@ public class FastDFSClientUtil {
   public void delFile(String filePath) {
     storageClient.deleteFile(filePath);
   }
-
   public InputStream download(String groupName, String path ) {
     InputStream ins =  storageClient.downloadFile(groupName, path, new DownloadCallback<InputStream>(){
       @Override
@@ -53,7 +52,6 @@ public class FastDFSClientUtil {
       }}) ;
     return ins ;
   }
-
   /**
       * 封装文件完整URL地址
      * @param storePath

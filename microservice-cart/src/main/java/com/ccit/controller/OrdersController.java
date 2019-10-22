@@ -59,7 +59,6 @@ public class OrdersController {
 	 * @param id
 	 * @return  true/false
 	 */
-
 	@DeleteMapping("/orders/{id}")
 	public boolean deleteOrder(@PathVariable("id")Integer id) {
 		return orderServiceImp.deleteOrder(id);
@@ -69,7 +68,6 @@ public class OrdersController {
 	 * @param id
 	 * @return  true/false
 	 */
-
 	@GetMapping("/orders/{id}")
 	public Orders getOrder(@PathVariable("id")Integer id) {
 		return orderServiceImp.getOneOrder(id);
@@ -79,7 +77,6 @@ public class OrdersController {
 	 * @param user_id
 	 * @return  true/false
 	 */
-
 	@GetMapping("/orders/user/{user_id}")
 	public List<OrdersExample> getUserId(@PathVariable("user_id")Integer user_id) {
 		return orderServiceImp.getUserId(user_id);
